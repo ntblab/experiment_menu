@@ -20,7 +20,7 @@ For running infant participants in the scanner, for which this code was original
 The hope is that very little in this code needs to be changed in order to set up this code on a new system. The only part where special information must be added is in the section titled 'DEFAULT PARAMETERS' at the top of the script. For instance you will need to specify the TR duration if using this for scanning in order for the code to know when to expect an incoming TR.
 
 To add a new eye tracker you will need to add information to each 'Utils_EyeTracker*' script about how different calls are turned into
-interactions with the eyetracker
+interactions with the eyetracker.
 
 To add new hardware you have to perform a few steps:
 
