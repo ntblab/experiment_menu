@@ -1,0 +1,7 @@
+# Exclude the following
+Data/*
+Stimuli/*
+
+# exception to the rule
+!Data/README.txt 
+!Stimuli/README.txt
