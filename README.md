@@ -9,7 +9,7 @@ Typical experimental code for fMRI assumes a regular block order with few interr
 
 The main script you want to run is Menu.m found in the 'Scripts' folder. This will generate a text based menu that allows you to navigate between experiments that have been created, all the while storing and formating the data from the experiments. Below is a thorough description of how the menu system works and what you would need to do to adapt it for your computer set up and to create a new experiment. 
 
-This has been tested on PTB 3.0.X but mainly on Macs and Linux. Mileage may vary. 
+This has been tested on PTB 3.0.X but mainly on Macs and Linux; however, mileage may vary by system. 
 
 ## Setup
 
@@ -20,7 +20,7 @@ For running infant participants in the scanner, for which this code was original
 The hope is that very little in this code needs to be changed in order to set up this code on a new system. The only part where special information must be added is in the section titled 'DEFAULT PARAMETERS' at the top of the script. For instance you will need to specify the TR duration if using this for scanning in order for the code to know when to expect an incoming TR.
 
 To add a new eye tracker you will need to add information to each 'Utils_EyeTracker*' script about how different calls are turned into
-interactions with the eyetracker
+interactions with the eyetracker.
 
 To add new hardware you have to perform a few steps:
 
@@ -60,7 +60,7 @@ The overall structure of the menu system is depicted in the figure below. The te
 
 ![experiment_menu_schematic.png](./experiment_menu_schematic.png)
 
-Once you have set up the environment, either by pre-specifying the call to 'Menu' or by responding to the questions when the code is launched, you will be put in the menu for choosing between experiments and blocks (also happens after a block finishes). There are three steps to experiment navigation: experiment selection, block selection and confirmation.
+Once you have set up the environment, either by pre-specifying the call to the 'Menu' function or by responding to the questions when the code is launched, you will be put in the menu for choosing between experiments and blocks (also happens after a block finishes). There are three steps to experiment navigation: experiment selection, block selection and confirmation.
 
 To select experiments and blocks you press numbers associated with the experiments, as printed in the command window. The program will wait for either the max number of characters for the options available (say if you have 12 options then if you press two keys it assumes you have confirmed your response) or until you press enter/return. When selecting an experimental block, roman numerals will be displayed at the start of the block name if it has been run before to indicate how many times it has been run.
 
