@@ -60,7 +60,7 @@ The overall structure of the menu system is depicted in the figure below. The te
 
 ![experiment_menu_schematic.png](./experiment_menu_schematic.png)
 
-Once you have set up the environment, either by prespecifying the call to 'Menu' or by responding to the questions when the code is launched, you will be put in the menu for choosing between experiments and blocks (also happens after a block finishes). There are three steps to experiment navigation: experiment selection, block selection and confirmation.
+Once you have set up the environment, either by pre-specifying the call to 'Menu' or by responding to the questions when the code is launched, you will be put in the menu for choosing between experiments and blocks (also happens after a block finishes). There are three steps to experiment navigation: experiment selection, block selection and confirmation.
 
 To select experiments and blocks you press numbers associated with the experiments, as printed in the command window. The program will wait for either the max number of characters for the options available (say if you have 12 options then if you press two keys it assumes you have confirmed your response) or until you press enter/return. When selecting an experimental block, roman numerals will be displayed at the start of the block name if it has been run before to indicate how many times it has been run.
 
