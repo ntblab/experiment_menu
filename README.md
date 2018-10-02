@@ -9,7 +9,7 @@ Typical experimental code for fMRI assumes a regular block order with few interr
 
 The main script you want to run is Menu.m found in the 'Scripts' folder. This will generate a text based menu that allows you to navigate between experiments that have been created, all the while storing and formating the data from the experiments. Below is a thorough description of how the menu system works and what you would need to do to adapt it for your computer set up and to create a new experiment. 
 
-This has been tested on PTB 3.0.X but mainly on Macs and Linux. Mileage may vary by system. 
+This has been tested on PTB 3.0.X but mainly on Macs and Linux; however, mileage may vary by system. 
 
 ## Setup
 
