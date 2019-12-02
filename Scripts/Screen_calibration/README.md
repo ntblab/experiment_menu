@@ -1,0 +1,11 @@
+# Steps to undistort a display
+If you have a display that has any of the following distortions: keystoning (more than what can be solved optically), stretching or curvature distortion, then this README can help.
+
+The assumed use case for this script is when projecting on to the ceiling of the bore. When projecting an image on to the surface of the bore from a rear projector, several factors interact to distort the image. 
+Most apparent is a curvature distortion that is elliptical. This means that the light has to travel further for the middle of the image rather than the sides. This distortion is not consistent across the height of the image: the curvature is more severe at the bottom of the image than the top.  
+A related distortion is keystoning, in which the lowest part of the image (i.e. the part of the image that is furtherest from the projector) is wider than the top part. Before pursuing digital steps for fixing this (in this script), you should use the optical option if your projector has one. The criteria for success is that the chord (distance between two points along the arc of a circle) of the top and the bottom of the image are equivalent.  
+Another distortion is stretching. Light must travel further for the lower parts of the image than the top parts and hence the image must compress these low parts and stretch the upper parts to compensate.  
+
+Once you have made sure the image is optically optimal (centered, un-keystoned as much as possible) then run the `WarpingUndistortionDemo.m` script in this folder. This script guides through the undistortion process. If it is your first time running this then it will open the 'DisplayUndistortionBVL' function which is the backbone of this process. Basically this script allows you to change the pixel assignment of video outputs. When you first open this, don't change anything, just exit: we need the general structure of these scripts but we don't need to use this manual approach to correct our distortion. Instead you will be shown a checkerboard, probably with a ribbon on it.
+
+Use the response keys to adjust the ribbon until the checks are square (you can measure them with a tape measure pressed against the screen).
