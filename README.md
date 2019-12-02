@@ -132,17 +132,17 @@ It is also encouraged that you record any stimulus related information in the Da
 User feedback and input is always welcome! Please give us feedback. If you find bugs then make an issue on Github explaining the bug and how to replicate it. 
 If you have updates to the code you want to add then please follow the following steps:
 
-On your private github account, fork this repo.
-Clone said forked repo: git clone https://github.com/CameronTEllis/experiment_menu.git
-Make your fork private if it isn't already. Do this on Github in settings
-Set your forked repos' upstream to the public: git remote add upstream https://github.com/ntblab/experiment_menu.git
-Make a branch for your update: git branch update_README
-Move into branch: git checkout update_README
-Add files to new branch: cp ../experiment_menu_private/README.md ./README.md 
-Git add and commit files: git add README.md; git commit -m "Update README"
-Push changes to your branch: git push origin update_README
-On github, initiate a pull request
-Have the pull request reviewed
+On your private github account, fork this repo.  
+Clone said forked repo: git clone https://github.com/CameronTEllis/experiment_menu.git  
+Make your fork private if it isn't already. Do this on Github in settings  
+Set your forked repos' upstream to the public: git remote add upstream https://github.com/ntblab/experiment_menu.git  
+Make a branch for your update: git branch update_README  
+Move into branch: git checkout update_README  
+Add files to new branch
+Git add and commit files: git add README.md; git commit -m "Update README"  
+Push changes to your branch: git push origin update_README  
+On github, initiate a pull request  
+Have the pull request reviewed  
 
 ## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
