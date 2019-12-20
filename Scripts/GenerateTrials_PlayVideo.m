@@ -30,7 +30,6 @@ Parameters.isAnticipationError=0; %Don't receive responses
  
 Parameters.DecayLapse=12; %How many seconds will you wait for
 
-<<<<<<< HEAD
 % Specify the movie size for each block type
 ppd_width=[22.75*2, 22.75, 22.75];% When we originally ran these movies at Princeton we made them 20% of the screen size, which comes out to 22.75 x 12.75 visual degrees. For preservation, the visual angle has been preserved for these analyses. If a movie is not 16:9 then it will be stretched
 ppd_height=[12.75*2, 12.75, 12.75];
@@ -39,17 +38,6 @@ for block_counter = 1:Parameters.BlockNum
     y_width = ppd_height(block_counter)/2 * Window.ppd;
     Parameters.Rect{block_counter}=[Window.centerX - x_width, Window.centerY - y_width, Window.centerX + x_width, Window.centerY + y_width];
 end
-=======
-% When we originally ran these movies at Princeton we made them 20% of the
-% screen size, which comes out to 22.75 x 12.75 visual degrees. For
-% preservation, the visual angle has been preserved for these analyses. If
-% a movie is not 16:9 then it will be stretched
-ppd_width=22.75;
-ppd_height=12.75;
-x_width = ppd_width/2 * Window.ppd;
-y_width = ppd_height/2 * Window.ppd;
-Parameters.Rect=[Window.centerX - x_width, Window.centerY - y_width, Window.centerX + x_width, Window.centerY + y_width];
->>>>>>> 823dd6debc151b7a1086b2d3e2c9f986b73d8404
 
 % Get all of the files in this directory
 
@@ -68,11 +56,9 @@ if length(DirNames) == 0
     
     % Load the data
     try
-<<<<<<< HEAD
+
         urlwrite('https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4', [Parameters.StimulusDirectory, 'BigBuckBunny.mp4'])
-=======
-        urlwrite('http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4', [Parameters.StimulusDirectory, 'BigBuckBunny.mp4'])
->>>>>>> 823dd6debc151b7a1086b2d3e2c9f986b73d8404
+
         PrintText_List=Utils_PrintText(Window, PrintText_List, sprintf('Finished downloading\n'));
     catch
         PrintText_List=Utils_PrintText(Window, PrintText_List, sprintf('Failed to load the data\n'));
