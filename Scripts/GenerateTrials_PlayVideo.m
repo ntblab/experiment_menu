@@ -12,7 +12,17 @@ Window = varargin{4};
 %Set up the parameters of the experiment
 
 Parameters.BaseExt=cd; %What is the current folder directory name
-Parameters.BaseExt=Parameters.BaseExt(1:max(find(Parameters.BaseExt=='/'))); %Remove the current folder
+if ispc == 1
+    Parameters.BaseExt=Parameters.BaseExt(1:max(find(Parameters.BaseExt=='\'))); %Remove the current folder
+else
+    Parameters.BaseExt=Parameters.BaseExt(1:max(find(Parameters.BaseExt=='/'))); %Remove the current folder
+end
+
+% Test whether you got a reasonable result
+if isempty(Parameters.BaseExt)
+    warning('Parameters.BaseExt is length zero, probably because your computer uses a different file system path that what is assumed');
+end
+    
 
 Parameters.StimulusDirectory='../Stimuli/AttentionGrabberVideos/'; %Where are the stimuli stored?
 
@@ -56,9 +66,7 @@ if length(DirNames) == 0
     
     % Load the data
     try
-
         urlwrite('https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4', [Parameters.StimulusDirectory, 'BigBuckBunny.mp4'])
-
         PrintText_List=Utils_PrintText(Window, PrintText_List, sprintf('Finished downloading\n'));
     catch
         PrintText_List=Utils_PrintText(Window, PrintText_List, sprintf('Failed to load the data\n'));

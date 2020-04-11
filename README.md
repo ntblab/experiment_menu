@@ -14,7 +14,7 @@ To build code that satisfies these goals is no easy feat. The current repository
 
 The main script you want to run is `Menu.m` found in the 'Scripts' folder in this repository. This will generate a text-based menu that prints to the MATLAB command window to allow you to navigate with the keyboard between experiments that have been created, all while storing and formatting the data collected from the experiments. Although the text-based system may seem clunky at first, expert users can navigate it faster than any point-and-click tool imaginable. Below is a thorough description of how the menu system works and what you would need to do to adapt it for your computer set up and to create a new experiment.  
 
-This has been tested on PTB 3.0.X on Macs and Linux and MATLAB versions newer than 2014a. Mileage may vary by system, send feedback if you have compatibility issues. 
+This has been tested on PTB 3.0.X on Macs and Linux and MATLAB versions newer than 2014a. In accordance with the advice from PTB it is recommended that you use a Linux system for running this code to ensure timing. In addition to the basic PTB install you will also need to install gstreamer in order to play movies. Gstreamer can be difficult to setup, in my experience version 1.14.4 works best with PTB. With all of this, mileage may vary by system, send feedback if you have compatibility issues. 
 
 Despite being set up to work with fMRI, this code can and has been used easily applied to behavior-only research. Same goes for eye tracking. In this way, this repository can serve as a boilerplate infrastructure for running PTB3 experiments in a consistent framework.
 
