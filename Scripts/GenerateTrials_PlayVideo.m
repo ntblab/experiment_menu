@@ -20,7 +20,7 @@ end
 
 % Test whether you got a reasonable result
 if isempty(Parameters.BaseExt)
-    warning('Parameters.BaseExt is length zero, probably because your computer uses a different file system path that what is assumed');
+    warning('Parameters.BaseExt is length zero, probably because your computer uses a different file system path than what is assumed');
 end
     
 
