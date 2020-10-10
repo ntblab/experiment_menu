@@ -1,5 +1,5 @@
 # experiment_menu
-## V_1.1
+## V_1.1 (branch for retinotopy scripts)
 
 Typical experimental code for fMRI tasks assumes a regular block order with few interruptions. This is appropriate in many cases, but when testing populations where interruptions are typical and blocks may need to be re-run or changed unexpectedly---such as with developmental or patient populations---this kind of linear, rigid code is non-optimal. 
 
