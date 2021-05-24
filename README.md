@@ -1,5 +1,14 @@
 # experiment_menu
-## V_1.1
+## V_1.1 (branch for movie memory scripts)
+
+-----------------------------------------
+
+This branch introduces code for running different movie experiments. Note that the stimulus folders for these experiments are absent due to copyright.
+If interested in running this code with the same movies used in our experiments, please contact one of the authors.
+For access to Mickey and Aeronaut movies, contact Tristan Yates: tristan.yates@yale.edu 
+
+-----------------------------------------
+
 
 Typical experimental code for fMRI tasks assumes a regular block order with few interruptions. This is appropriate in many cases, but when testing populations where interruptions are typical and blocks may need to be re-run or changed unexpectedly---such as with developmental or patient populations---this kind of linear, rigid code is non-optimal. 
 
