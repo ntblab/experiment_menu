@@ -5,3 +5,5 @@ Initial public release containing functioning code for PlayVideo, PosnerCuing an
 
 ## V_1.1
 Added Windows compatibility changes
+
+## V_1.1 (branch for movie memory scripts)

@@ -1,15 +1,11 @@
 %% Generate Trial sequence and conditions for Movie Memory Experiment
-
-%Generate the appropriate trial sequence with randomization for Movie
-%Memory Experiment
-
-%Re-designed and rewritten 9/19/2017
-
-%Unlike previous version, we want things more tightly counterbalanced and
-%decided ahead of time. As such, we should always be listening for scanner
-%triggers and shouldnt make that an option. We also should decide the
-%conditions ahead of time. 
-% 
+%
+% Generate the appropriate trial sequence with randomization for Movie
+% Memory Experiment
+%
+% Movies and their names are not provided because of copyright, but interested individuals should reach out for a copy 
+%
+% Re-designed and rewritten 9/19/2017
 % Edited spring 2019
 % Clean version 05/2021
 
