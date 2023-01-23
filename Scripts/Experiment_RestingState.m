@@ -4,14 +4,15 @@
 % Display a black screen while listening for TRs and q's
 % Count the elapsed time in the experiment
 %
-%7/28/16 C Ellis
+% 7/28/16 C Ellis
+% Add fixation stimulus if wanted 1/26/2022
 
 function Data=Experiment_RestingState(varargin)
 
 %Set variables
 %ChosenBlock=varargin{1};
 Window=varargin{2};
-%Conditions=varargin{3};
+Conditions=varargin{3};
     
 
 fprintf('\n\nResting state.\n\n');
@@ -37,9 +38,36 @@ else
 end
 
 if Quit==0
-    %Make the screen black
-    Screen(Window.onScreen,'FillRect',0);
-    Data.Timing.TestStart=Screen('Flip',Window.onScreen);
+    
+    % did you want to have the fixation cross or no? 
+    if Conditions.Parameters.fixation==0
+        
+        %Make the screen black
+        Screen(Window.onScreen,'FillRect',0);
+        Data.Timing.TestStart=Screen('Flip',Window.onScreen);
+    else
+        
+        %Specify some screen attributes
+        centerX = Window.centerX;
+        centerY = Window.centerY;
+        
+        % fixation parameters 
+        % (identical to Passive and Instrumental Conditioning tasks) 
+        Fixation_Size = 2*Window.ppd;
+        Fixation_Color = [255,255,255];
+        Fixation_Rect_Center = [centerX-(Fixation_Size/2),centerY-(Fixation_Size/2),centerX+(Fixation_Size/2),centerY+(Fixation_Size/2)];
+        
+        % set up the texture
+        Template_Image=ones(ceil(Fixation_Size), ceil(Fixation_Size),3)* Window.bcolor; %Make a small square to put the triangle on
+        Fixation_Image=insertShape(Template_Image, 'Line', [0,ceil(Fixation_Size/2),Fixation_Size,ceil(Fixation_Size/2); ceil(Fixation_Size/2),0, ceil(Fixation_Size/2),Fixation_Size], 'Opacity', 1, 'Color', Fixation_Color, 'LineWidth',15);
+        Fixation_Tex=Screen('MakeTexture', Window.onScreen, Fixation_Image);
+        
+        % show the texture 
+        Screen(Window.onScreen,'FillRect',Window.bcolor);
+        Screen('DrawTexture', Window.onScreen, Fixation_Tex, [], Fixation_Rect_Center,[],[],1);
+        Data.Timing.TestStart=Screen('Flip',Window.onScreen);
+    end
+    
 end
 
 %Keep collecting TRs until you quit
@@ -47,6 +75,7 @@ NextPrint=1;
 fprintf('Elapsed Time:     ');
 Data.KeyPresses = {};
 Data.KeyTimestamps = {};
+Duration=0;
 while Quit==0
     
     [keyIsDown,keyCode_onset] = KbQueueCheck(Window.KeyboardNum);
